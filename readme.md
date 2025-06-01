@@ -10,7 +10,7 @@ O projeto tem como objetivo entender e aplicar os principais conceitos relaciona
 - Criação de exceções personalizadas (`custom exceptions`)
 - Uso de `throw` e `throws`
 
-Este conteúdo faz parte da minha formação no curso **Entra21** e da minha prática contínua em **Java**.
+Este conteúdo faz parte da minha formação no curso **Alura** e da minha prática contínua em **Java**.
 
 ## 🛠️ Tecnologias Utilizadas
 
