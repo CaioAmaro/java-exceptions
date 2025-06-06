@@ -39,13 +39,22 @@ public class AdocaoService {
         Pet pet = petRepository.getReferenceById(dto.idPet());
         Tutor tutor = tutorRepository.getReferenceById(dto.idTutor());
 
+        //PET JÁ ADOTADO
+        if(pet.getAdotado()){
+
+        }
+
+        //PET COM SOLICITAÇÃO DE ADOÇÃO EM ANDAMENTO
+        Boolean adocao = adocaoRepository.existsPetIdAndStatus(dto.idPet(), StatusAdocao.AGUARDANDO_AVALIACAO);
+        if()
+
         adocaoRepository.save(new Adocao(tutor,pet, dto.motivo()));
     }
 
     public void aprovar(AprovarAdocaoDTO dto){
         Adocao adocao = adocaoRepository.getReferenceById(dto.idAdocao());
-        adocao.marcarComoAprovada();
-        adocao.getPet().marcarComoAdotado();
+            adocao.marcarComoAprovada();
+            adocao.getPet().marcarComoAdotado();
     }
 
     public void reprovar(ReprovarAdocaoDTO dto){
